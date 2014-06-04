@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="shortcut icon" type="image/png" href="favicon.ico"/>
+        <title>Master Hotel</title>
+
+        <!-- Bootstrap -->
+        <link href="css/bootstrap.min.css" rel="stylesheet">
+        <link href="css/style.css" rel="stylesheet">
+        <link href='http://fonts.googleapis.com/css?family=Cuprum:400,700&subset=cyrillic' rel='stylesheet' type='text/css'>
+        <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+        <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+        <!--[if lt IE 9]>
+          <script src="js/html5shiv.js"></script>
+          <script src="js/respond.js"></script>
+      
+        <![endif]-->
+
+        <!--[if gte IE 9]>
+            <style type="text/css">
+             *{
+                 filter: none;
+              }
+            </style>
+        <![endif]-->
+    </head>
+    <body>
+        <!-- Part 1: Wrap all page content here -->
+        <div class="wrap">
+            <header class="navbar navbar-static-top custom-navbar clearfix" >
+                <div class="custom-container">
+                    <div class="navbar-header clearfix">
+                        <a href="./" class="pull-left logo">  
+                            <img src="css/img/logo.png"  alt=""/>
+                        </a>
+                        <a href="./" class="vnukovo-text pull-left">  
+                            <img src="css/img/vnukovo.png"  alt="Внуково"/>
+                        </a>
+
+                    </div>
+                    <div class="planes small-plane pull-right hidden-xs"></div>
+
+                    <div class=" header-text-wrapper">
+                        <a href="tel:+74954560987" class="header-phones header-text">+7 903 671 98 96 </a>
+                        <a href="tel:+74954560987" class="header-phones header-text">+7 903 671 56 81 </a>
+                        <span class="header-text">г.Внуково д.85</span>
+                    </div>
+                    <div class="planes big-plane pull-right hidden-xs"></div>
+
+                </div>
+            </header>
+
+            <div class="breadcrums-block clearfix">
+                <div class="custom-container">
+                    <div class="breadcrums-wrapper">
+                        <div class="category-icon pull-left"></div>
+                        <div class="pull-left">
+                            <div class="category-name">Отели</div>
+                            <div class="breadcrums">
+                                <a href="/" class="breadcrums-link">Главная</a>
+                                <span class="divider">/</span>
+                                <a href="/" class="breadcrums-link">Отели</a>
+                                <span class="divider">/</span>
+                                <a href="javascript:void(0);" class="breadcrums-link">Фишка</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="custom-container">
+                <div class="address-wrapper clearfix">
+                    <div class="col-xs-12 col-sm-12 hotel-name-wrapper">
+                        <a href="#" class="hotel-name">Фишка</a>
+                    </div>
+                    <div class="col-xs-12 col-sm-12 hotel-address">
+                        Красногвардейская улица, дом 12, корп.3 (м. Дмитровская)
+                    </div>
+                    <div class="col-xs-12 col-sm-12 phone-wrapper">
+                        <a href="tel:+79264567890" class="hotel-phone">+7 926 456 78 90</a>
+                    </div>
+                    <div class="col-xs-12 col-sm-12 btn-booking-wrapper">
+                        <button type="button" class="btn-booking">Забронировать на час</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="custom-container">
+                <!-- main slider carousel -->
+                <div class="clearfix big-photo-wrapper" id="slider">
+                    <div class="" id="carousel-bounding-box">
+                        <div id="myCarousel" class="carousel slide">
+                            <!-- main slider carousel items -->
+                            <div class="carousel-inner">
+                                <div class="active item" data-slide-number="0">
+                                    <img src="css/img/slider/photo1.png" class="img-responsive big-photo">
+                                </div>
+                                <div class="item" data-slide-number="1">
+                                    <img src="css/img/slider/photo2.png" class="img-responsive big-photo">
+                                </div>
+                                <div class="item" data-slide-number="2">
+                                    <img src="css/img/slider/photo3.png" class="img-responsive big-photo">
+                                </div>
+                                <div class="item" data-slide-number="3">
+                                    <img src="css/img/slider/photo4.png" class="img-responsive big-photo">
+                                </div>
+                                <div class="item" data-slide-number="4">
+                                    <img src="css/img/slider/photo5.png" class="img-responsive big-photo">
+                                </div>
+                            </div>
+                            <!-- main slider carousel nav controls --> 
+                            <!-- Controls -->
+                            <!--                            <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+                                                            <span class="glyphicon glyphicon-chevron-left"></span>
+                                                        </a>
+                                                        <a class="right carousel-control" href="#myCarousel" data-slide="next">
+                                                            <span class="glyphicon glyphicon-chevron-right"></span>
+                                                        </a>-->
+                        </div>
+                    </div>
+                </div>
+                <!--/main slider carousel-->
+                <!-- thumb navigation carousel -->
+                <div class="clearfix" id="slider-thumbs">
+                    <!-- thumb navigation carousel items -->
+                    <ul class="custom-slider-thumb">
+                        <li class="thumb-item"> 
+                            <a id="carousel-selector-0" class="thumb-item-link" href="javascript:void(0);" data-number="0">
+                                <img src="css/img/slider/photo1.png" class="img-responsive thumb-img selected-thumb">
+                            </a>
+                        </li>
+                        <li class="thumb-item"> 
+                            <a id="carousel-selector-1" href="javascript:void(0);" data-number="1" class="thumb-item-link">
+                                <img src="css/img/slider/photo2.png" class="img-responsive thumb-img">
+                            </a>
+                        </li>
+                        <li class="thumb-item"> 
+                            <a id="carousel-selector-2" href="javascript:void(0);" data-number="2" class="thumb-item-link">
+                                <img src="css/img/slider/photo3.png" class="img-responsive thumb-img">
+                            </a>
+                        </li>
+                        <li class="thumb-item"> 
+                            <a id="carousel-selector-3" href="javascript:void(0);" data-number="3" class="thumb-item-link">
+                                <img src="css/img/slider/photo4.png" class="img-responsive thumb-img">
+                            </a>
+                        </li>
+                        <li class="thumb-item"> 
+                            <a id="carousel-selector-4" href="javascript:void(0);" data-number="4" class="thumb-item-link">
+                                <img src="css/img/slider/photo5.png" class="img-responsive thumb-img">
+                            </a>
+                        </li>
+                    </ul>
+
+                </div>
+            </div>
+            <div class="custom-container">
+                <div class="hotel-description clearfix">
+                    <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12 margin-row">
+                        <div class="pull-left icon-description "></div>
+                        <div class="pull-left text-description ">Макс.чел: 3</div>
+                    </div>
+                    <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12 margin-row">
+                        <div class="pull-left icon-description room-amount"></div>
+                        <div class="pull-left text-description ">Кол-во номеров: 4</div>
+                    </div>
+                    <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12 margin-row">
+                        <div class="pull-left icon-description parking"></div>
+                        <div class="pull-left text-description ">Парковка: Есть</div>
+                    </div>
+                    <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12 ">
+                        <div class="pull-left icon-description full-info"></div>
+                        <a href="#" class="pull-left text-description link-description">
+                            Подробнее об отеле
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="custom-container">
+                <div class="rooms-wrapper clearfix">
+                    <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 col-rooms-left">
+                        <div class="clearfix">
+                            <div class="medium-photo-wrapper pull-left">
+                                <img src="css/img/slider/medium1.png" class="img-responsive medium-photo" alt=""/>
+                            </div>
+                            <!--/main slider carousel-->
+                            <!-- thumb navigation carousel -->
+                            <div class="pull-left medium-thumb-wrapper" >
+                                <!-- thumb navigation carousel items -->
+                                <ul class="vertical-slider-thumb">
+                                    <li class="thumb-item-medium"> 
+                                        <a href="javascript:void(0);" class="thumb-medium-link" data-toggle="modal"   data-target="#basicModal">
+                                            <img src="css/img/slider/small.png" class="img-responsive thumb-img-medium ">
+                                            <span class="plus"></span>
+                                        </a>
+                                    </li>
+                                    <li class="thumb-item-medium"> 
+                                        <a href="javascript:void(0);" class="thumb-medium-link" data-toggle="modal"   data-target="#basicModal">
+                                            <img src="css/img/slider/small.png" class="img-responsive thumb-img-medium ">
+                                            <span class="plus"></span>
+                                        </a>
+                                    </li>
+                                    <li class="thumb-item-medium"> 
+                                        <a href="javascript:void(0);" class="thumb-medium-link" data-toggle="modal"   data-target="#basicModal">
+                                            <img src="css/img/slider/small.png" class="img-responsive thumb-img-medium ">
+                                            <span class="plus"></span>
+                                        </a>
+                                    </li>
+                                    <li class="thumb-item-medium"> 
+                                        <a href="javascript:void(0);" class="thumb-medium-link" data-toggle="modal"   data-target="#basicModal">
+                                            <img src="css/img/slider/small.png" class="img-responsive thumb-img-medium ">
+                                            <span class="plus"></span>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="room-description-header">
+                            Стандартный семейный улучшенный
+                        </div>
+                        <div class="room-description">
+                            <div class="row-price">
+                                <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 no-padding">1 час</div>
+                                <div class="col-lg-3 col-md-6 col-sm-6 col-xs-6 no-padding room-price">500 рублей</div>
+                            </div>
+                            <div class="row-price">
+                                <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 no-padding">3 часа</div>
+                                <div class="col-lg-3 col-md-6 col-sm-6 col-xs-6 no-padding room-price">1500 рублей</div>
+                            </div>
+                            <div class="row-price">
+                                <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 no-padding">Ночь(23:00 - 9:00)</div>
+                                <div class="col-lg-3 col-md-6 col-sm-6 col-xs-6 no-padding room-price">2000 рублей</div>
+                            </div>
+                            <div class="row-price">
+                                <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 no-padding">Сутки(24 часа)</div>
+                                <div class="col-lg-3 col-md-6 col-sm-6 col-xs-6 no-padding room-price">3000 рублей</div>
+                            </div>
+                            <div>
+                                При почасовой оплате минимальный заказ 3 часа
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 col-rooms-right">
+                        <div class="clearfix">
+                            <div class="medium-photo-wrapper pull-left">
+                                <img src="css/img/slider/medium1.png" class="img-responsive medium-photo" alt=""/>
+                            </div>
+                            <!--/main slider carousel-->
+                            <!-- thumb navigation carousel -->
+                            <div class="pull-left medium-thumb-wrapper" >
+                                <!-- thumb navigation carousel items -->
+                                <ul class="vertical-slider-thumb">
+                                    <li class="thumb-item-medium"> 
+                                        <a href="javascript:void(0);" class="thumb-medium-link" data-toggle="modal"   data-target="#basicModal">
+                                            <img src="css/img/slider/small.png" class="img-responsive thumb-img-medium ">
+                                            <span class="plus"></span>
+                                        </a>
+                                    </li>
+                                    <li class="thumb-item-medium"> 
+                                        <a href="javascript:void(0);" class="thumb-medium-link" data-toggle="modal"   data-target="#basicModal">
+                                            <img src="css/img/slider/small.png" class="img-responsive thumb-img-medium ">
+                                            <span class="plus"></span>
+                                        </a>
+                                    </li>
+                                    <li class="thumb-item-medium"> 
+                                        <a href="javascript:void(0);" class="thumb-medium-link" data-toggle="modal"   data-target="#basicModal">
+                                            <img src="css/img/slider/small.png" class="img-responsive thumb-img-medium ">
+                                            <span class="plus"></span>
+                                        </a>
+                                    </li>
+                                    <li class="thumb-item-medium"> 
+                                        <a href="javascript:void(0);" class="thumb-medium-link" data-toggle="modal"   data-target="#basicModal">
+                                            <img src="css/img/slider/small.png" class="img-responsive thumb-img-medium ">
+                                            <span class="plus"></span>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="room-description-header">
+                            Стандартный семейный улучшенный
+                        </div>
+                        <div class="room-description">
+                            <div class="row-price">
+                                <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6  no-padding">1 час</div>
+                                <div class="col-lg-3 col-md-6 col-sm-6 col-xs-6 no-padding room-price">500 рублей</div>
+                            </div>
+                            <div class="row-price">
+                                <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 no-padding">3 часа</div>
+                                <div class="col-lg-3 col-md-6 col-sm-6 col-xs-6 no-padding room-price">1500 рублей</div>
+                            </div>
+                            <div class="row-price">
+                                <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 no-padding">Ночь(23:00 - 9:00)</div>
+                                <div class="col-lg-3 col-md-6 col-sm-6 col-xs-6 no-padding room-price">2000 рублей</div>
+                            </div>
+                            <div class="row-price">
+                                <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 no-padding">Сутки(24 часа)</div>
+                                <div class="col-lg-3 col-md-6 col-sm-6 col-xs-6 no-padding room-price">3000 рублей</div>
+                            </div>
+                            <div>
+                                При почасовой оплате минимальный заказ 3 часа
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div id="push"></div>
+        </div>
+        <div id="footer">
+            <div class="stripes"></div>
+
+            <div class="custom-container">
+                <div class="col-md-6 col-sm-6 col-xs-12" >
+                    <form class="news-form">
+                        <div class="news-form-text">Подписаться на наши новости</div>
+                        <div class="news-input-wrapper">
+                            <input type="text" class="input-sm news-input pull-left" placeholder="Ваш-email">
+                            <button type="submit" class="news-btn pull-left">Ok</button>
+                        </div>
+                    </form>
+                </div>
+                <div class="col-md-6 col-sm-6 col-xs-12" >
+                    <div class="social-links-wrapper">
+                        <a href="#" class="socialLinks vkLink"></a>
+                        <a href="#" class="socialLinks fbLink"></a>
+                        <a href="#" class="socialLinks twLink"></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="modal fade" id="basicModal" tabindex="-1" role="dialog" aria-labelledby="basicModal" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">x</button>
+                        <h4 class="modal-title" id="myModalLabel">Modal title</h4>
+                    </div>
+                    <div class="modal-body">
+                        <h3>Modal Body</h3>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                        <button type="button" class="btn btn-primary">Save changes</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+        <script type="text/javascript">window.jQuery || document.write('<script type="text/javascript" src="js/jquery-1.11.0.min.js"><\/script>')</script>
+
+        <!-- Include all compiled plugins (below), or include individual files as needed -->
+        <script src="js/bootstrap.min.js"></script>
+        <script src="js/script.js"></script>
+    </body>
+</html>
