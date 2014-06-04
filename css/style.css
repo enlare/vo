@@ -365,17 +365,8 @@ hr {
     -webkit-filter: grayscale(0%);
     border: 2px solid #ffbe05;
 }
-.hotel-description{
-    padding: 30px;
-    background: #e8e8e8;
-    margin: 10px 0 12px 0;
-}
-.icon-description{
-    background: url(img/icons.png) 0 0 no-repeat;
-    width: 30px;
-    height: 30px;
-    margin: 0 10px 0 0;
-}
+
+
 .room-amount{
     background-position: -30px 0;
 }
@@ -386,20 +377,47 @@ hr {
     background-position: -90px 0;
 }
 .text-description{
-    height: 30px;
-    line-height: 30px;
-    font-size: 16px;
-    color: #333333;
+
 }
-.link-description,
-.link-description:active,
-.link-description:focus,
-.link-description:visited,
-.link-description:hover{
-    text-decoration: none;
-    color: #333333;
-    display: inline-block;
+.text-caption{
+    background: url(img/caption.jpg) center bottom no-repeat;
+    padding: 0 0 20px 0;
+    width: 100%;
+    height: 87px;
+    color: #313b45;
+    font-size: 48px;
+    line-height:48px;
+    text-align: center;
+    /*      background-size: cover;
+        -moz-background-size: cover;   
+        background-position: center;   
+        background-size: 100% 100%;*/
+    text-shadow: 3px 1px 0px rgba(150, 150, 150, 0.5);
 }
+.icon-description img{
+    /*    border-radius: 50%;
+        border: 5px solid  #d9d9cd;*/
+
+}
+.icon-description{
+    padding:0 30px 0 20px;
+}
+.text-description-wrapper{
+    padding: 0 25px 0 0;
+}
+.hotel-description{
+    padding: 30px 0;
+}
+.text-description{
+    color: #333333;
+    font-size: 14px;
+    /*margin: 12px 0 0 0;*/
+    padding: 12px 30px 0 30px;
+    text-align: justify;
+}
+
+
+
 .col-rooms-left{
     padding: 0 20px 0 0;
 }
@@ -882,7 +900,21 @@ and (orientation:landscape){
     .container-small{
         padding: 0 25px;
     }
-
+    .text-caption {
+        height: 56px;
+        font-size: 24px;
+        line-height: 24px;
+        margin: 20px auto 0;
+    }
+    .icon-description img {
+        margin: 0 auto;
+    }
+    .text-description-wrapper{
+        padding: 10px;
+    }
+    .icon-description {
+        padding: 0 30px;
+    }
 
     .social-links-wrapper{
         float: none;
@@ -903,12 +935,7 @@ and (orientation:landscape){
     }
 
 
-    .margin-row{
-        margin: 0 0 10px 0;
-    }
-    .hotel-description{
-        padding: 15px;
-    }
+
 
     .col-rooms-left, .col-rooms-right{
         padding: 0;
@@ -1020,13 +1047,23 @@ and (orientation : portrait) { /* STYLES GO HERE */
     .dotted-border{
         border: none;
     }
+ .text-caption {
+/*        height: 56px;
+        font-size: 24px;
+        line-height: 24px;*/
+        margin: 20px auto 0;
+    }
+    .icon-description img {
+        margin: 0 auto;
+    }
+    .text-description-wrapper{
+        padding: 10px;
+    }
+    .icon-description {
+        padding: 0 30px;
+    }
 
-    .margin-row{
-        margin: 0 0 10px 0;
-    }
-    .hotel-description{
-        padding: 15px;
-    }
+
     .col-rooms-left, .col-rooms-right{
         padding: 0;
     }
