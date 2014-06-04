@@ -317,12 +317,7 @@ hr {
     width: 100%;
     max-width: 100%;
 }
-.medium-photo{
-    display: inline-block;
-    width: 100%;
-    max-width: 100%;
-    max-height: 310px;
-}
+
 .slider-photo-wrapper .small-photo{
     width: 208px;
     max-width: 208px;
@@ -333,18 +328,6 @@ hr {
     margin: 0 10px 0 0;
 }
 .slider-photo-wrapper .small-photo:last-child{
-    margin: 0;
-}
-
-
-.custom-slider-thumb, .vertical-slider-thumb{
-    list-style: none;
-    -webkit-padding-start: 0;
-    padding: 0;
-    overflow: hidden;
-    margin: 10px 0 0 0;
-}
-.vertical-slider-thumb{
     margin: 0;
 }
 
@@ -416,65 +399,6 @@ hr {
     text-align: justify;
 }
 
-
-
-.col-rooms-left{
-    padding: 0 20px 0 0;
-}
-.col-rooms-right{
-    padding: 0 0 0 20px;
-}
-.medium-photo-wrapper{
-    width: 78%;
-}
-.medium-thumb-wrapper{
-    width: 22%;
-    border: 2px solid #f6f6f6;
-    background: #f6f6f6
-}
-.thumb-item-medium{
-    height: 24%;
-}
-.thumb-medium-link{
-    position: relative;
-    display: inline-block;
-}
-.plus{
-    background: url(img/plus.png) 0 0 no-repeat;
-    display: inline-block;
-    width: 15px;
-    height: 15px;
-    position: absolute;
-    top:50%;
-    left: 50%;
-    margin: -7px 0 0 -7px;
-}
-.room-description-header{
-    height: 40px;
-    width: 100%;
-    color: #ffffff;
-    font-size: 24px;
-    background: #de6262;
-    text-align: center;
-    line-height: 40px;
-}
-.room-description{
-    padding: 20px 50px;
-    width: 100%;
-    height: auto;
-    color: #333333;
-    font-size: 20px;
-    background: #f6f6f6;
-}
-.room-price{
-    text-align: center;
-    color: #de6262;
-    font-size: 20px;
-}
-.row-price{
-    margin: 0 0 13px 0;
-    overflow: hidden;
-}
 
 .carousel-indicators li{
     /*display: block;*/
@@ -555,54 +479,93 @@ hr {
 
 /*main preview items*/
 
-.col-main-preview{
-    max-width: 330px;
-    margin: 0 15px 25px 15px;
-    padding: 0;
-}
-.read-more, .read-more:hover{
-    padding: 2px 22px;
-    border-radius: 4px;
-    color: #ffffff;
-    font-size: 16px;
-    background: #24ac7a;
-    text-decoration: none;
-}
+
+
 .preview-price{
-    color: #de6262;
-    font-size: 18px;
-    height: 18px;
-    line-height: 18px;
-    margin: 0 0 15px 0;
+    font-size: 24px;
+    line-height: 24px;
+    padding: 5px 25px;
+    border-radius: 4px;
+    background: #00468c;
+    color: #ffffff;
+    width: auto;
+    display: inline-block;
+    margin: 10px auto 0;
+    font-family: 'Franklin Gothic Demi Cond', arial;
+
+}
+.preview-wrapper{
+    background: #f8f8f8;
+    -moz-box-shadow:   inset 0  8px 8px -8px rgba(50, 50, 50, 0.14), 
+        inset  -0  8px 8px -8px rgba(50, 50, 50, 0.14);
+    -webkit-box-shadow: inset 0  8px 8px -8px rgba(50, 50, 50, 0.14), 
+        inset 0  8px 8px -8px rgba(50, 50, 50, 0.14);
+    box-shadow:        inset 0  8px 8px -8px rgba(50, 50, 50, 0.14), 
+        inset 0  8px 8px -8px rgba(50, 50, 50, 0.14);
+    padding: 30px 22px;
+
+}
+.col-main-preview{
+    max-width: 300px;
+    margin: 0;
+    padding: 0;
+    text-align: center;
 }
 .preview-wrapper .preview-row .col-main-preview:first-child,
 .preview-wrapper .preview-row .col-main-preview:last-child{
-    margin: 0 0 25px 0;
+    margin: 0 0 220px 0;
 }
 .preview-wrapper .preview-row .col-main-preview:nth-child(2n){
-    margin: 0 40px 25px 40px;
+    margin: 0 22px 220px 22px;
 }
 
 
-.preview-wrapper .preview-row:nth-child(2n+1)
+/*.preview-wrapper .preview-row:nth-child(2n+1)
 .col-main-preview:nth-child(2n+1) .preview-description-header{
     background: #24ac7a;
-}
+}*/
 
-.preview-wrapper .preview-row:nth-child(2n+1)
+/*.preview-wrapper .preview-row:nth-child(2n+1)
 .col-main-preview:nth-child(2n+1) .preview-price{
     color: #24ac7a;
-}
+}*/
 
-.preview-wrapper .preview-row:nth-child(2n)
+/*.preview-wrapper .preview-row:nth-child(2n)
 .col-main-preview:nth-child(2n) .preview-description-header{
     background: #24ac7a;
-}
+}*/
 
-.preview-wrapper .preview-row:nth-child(2n)
+/*.preview-wrapper .preview-row:nth-child(2n)
 .col-main-preview:nth-child(2n) .preview-price{
     color: #24ac7a;
+}*/
+.preview-caption{
+    background: #999999;
+    color: #ffffff;
+    border-radius: 4px;
+    font-size: 18px;
+    margin: 0 auto 30px auto;
+    display: inline-block;
+    width: auto;
+    padding: 4px 30px;
 }
+.link-wrapper{
+
+    -moz-box-shadow:   inset 0px 2px 3px 0px rgba(50, 50, 50, 0.14), 
+        inset 0px -2px 3px 0px rgba(50, 50, 50, 0.14);
+    -webkit-box-shadow: inset 0px 2px 3px 0px rgba(50, 50, 50, 0.14), 
+        inset 0px -2px 3px 0px rgba(50, 50, 50, 0.14);
+    box-shadow:        inset 0px 2px 3px 0px rgba(50, 50, 50, 0.14), 
+        inset 0px -2px 3px 0px rgba(50, 50, 50, 0.14);
+    background-color:#dbd9da; 
+    padding: 10px;
+    margin: 0 0 10px 0;
+}
+.link-preview-wrapper, .link-preview-wrapper:hover{
+    display: block;
+    text-decoration: none;
+}
+
 .custom-pagination{
     padding: 0;
     -webkit-padding-start: 0;
@@ -617,6 +580,12 @@ hr {
 }
 .custom-pagination li:last-child{
     margin: 0;
+}
+.preview-description{
+    text-align: center;
+    font-size: 21px;
+    color: #313b45;
+
 }
 
 .news-title{
@@ -675,10 +644,6 @@ hr {
     height: 12px;
     text-align: center;
 }
-.link-preview-wrapper, .link-preview-wrapper:hover{
-    display: block;
-    text-decoration: none;
-}
 
 
 
@@ -711,9 +676,7 @@ and (max-width : 320px) {
         width: 56px;
         max-width: 56px;
     }
-    .col-main-preview{
-        max-width: 250px;
-    }
+   
     .carousel-caption{
         left: 10px;
         height: 127px;
@@ -775,22 +738,12 @@ and (orientation : lanscape) {
         width: 88px;
         max-width: 88px;
     }
-    .thumb-item-medium{
-        margin-bottom: 1px;
-        max-height: 58px;
-        height: 58px !important;
-    }
+
 }
 @media only screen
 and (min-width : 320px)
 and (max-width : 568px)
 {
-    .room-description-header{
-        font-size: 16px;
-    }
-
-
-
 
 }
 
@@ -800,9 +753,7 @@ and (min-width : 320px)
 and (max-width : 568px)
 and (orientation : portrait) 
 {
-    .thumb-item-medium{
-        max-height: 33px;
-    }
+
     .carousel-caption{
         left: 10px;
         height: 127px;
@@ -831,11 +782,7 @@ and (orientation : portrait)
 and (min-width : 320px)
 and (max-width : 568px)
 and (orientation : lanscape){
-    .thumb-item-medium{
-        max-height: 70px;
-        height: 70px;
-        margin-bottom:1px;
-    }
+
     .carousel-caption{
         left: 10px !important;
         height: 150px !important;
@@ -937,23 +884,6 @@ and (orientation:landscape){
 
 
 
-    .col-rooms-left, .col-rooms-right{
-        padding: 0;
-    }
-    .col-rooms-right{
-        margin-top: 20px;
-    }
-    .room-description{
-        padding: 20px 15px;
-        font-size: 15px;
-    }
-    .room-description-header{
-        height: auto;
-        line-height: 20px;
-    }
-    .room-price{
-        font-size: 15px;
-    }
 
 
     .container-carousel{
@@ -989,11 +919,14 @@ and (orientation:landscape){
     .preview-wrapper .preview-row .col-main-preview, .preview-wrapper .preview-row .col-main-preview:nth-child(2n){
         margin: 0 auto 25px auto;
     }
-    .preview-price{
-        font-size: 16px;
-        line-height: 16px;
-        height: auto;
-    }
+    /*    .preview-price{
+            font-size: 24px;
+            line-height: 24px;
+            padding: 5px 25px;
+            border-radius: 4px;
+            background: #00468c;
+    
+        }*/
     .col-main-preview{
         max-width: 300px;
         float: none;
@@ -1047,10 +980,10 @@ and (orientation : portrait) { /* STYLES GO HERE */
     .dotted-border{
         border: none;
     }
- .text-caption {
-/*        height: 56px;
-        font-size: 24px;
-        line-height: 24px;*/
+    .text-caption {
+        /*        height: 56px;
+                font-size: 24px;
+                line-height: 24px;*/
         margin: 20px auto 0;
     }
     .icon-description img {
@@ -1063,10 +996,6 @@ and (orientation : portrait) { /* STYLES GO HERE */
         padding: 0 30px;
     }
 
-
-    .col-rooms-left, .col-rooms-right{
-        padding: 0;
-    }
 
 
     .container-carousel{
@@ -1117,9 +1046,7 @@ and (orientation:landscape){
         width: 196px;
         max-width: 196px;
     }
-    .thumb-item-medium{
-        max-height: 60px;
-    }
+
     .col-main-preview, .news-preview{
         max-width: 280px;
     }
