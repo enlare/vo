@@ -22,5 +22,9 @@ $(document).ready(function() {
         // Добавляем на карту
         map.geoObjects.add(metka);
     }
+    
+     $(document).on('click touchstart', '.up', function() {
+        $('body').scrollTop(0);
+    });
 
 });
