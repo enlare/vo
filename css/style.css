@@ -31,10 +31,10 @@ body {
 
 }
 hr {
-    margin-top: 30px;
-    margin-bottom: 30px;
+    margin-top: 10px;
+    margin-bottom: 10px;
     border: 0;
-    border-top: 1px solid #f8f6f6;
+    border-top: 1px solid #cccccc;
 }
 .wrap {
     min-height: 100%;
@@ -113,6 +113,11 @@ hr {
 .footer-menu-blocks .menu-item:active,
 .footer-menu-blocks .menu-item:visited{
     padding: 0 16px 0 20px;
+}
+
+.top-menu-blocks .active-menu-item,
+.top-menu-blocks  .menu-item:hover{
+    background: #6699ff;
 }
 
 .social-links{
@@ -723,6 +728,10 @@ hr {
     font-size: 14px;
     color: #cccccc;
 }
+.big-feedback-input{
+    width: 50%;
+    border-radius: 2px;
+}
 .feedback-btn{
     margin: 17px 0 0 0;
 }
@@ -733,7 +742,73 @@ hr {
     background: url(img/up.png) 0 0 no-repeat;
     margin: 17px 30px 0 0;
 }
+.custom-label{
+    font-weight: normal;
+    color: #333333;
+    font-size: 16px;
+    line-height: 16px;
+    margin: 0 0 13px 0;
+}
+.big-feedback-wrapper{
+    padding: 0;
+}
+h1{
+    color: #000066;
+    font-size:  24px;
+    line-height: 24px;
+}
+.form-group{
+    margin-bottom: 10px;
+}
+.blue-btn{
+    font-size: 16px;
+    line-height: 16px;
+    padding: 13px;
+    border-radius: 4px;
+    background: #00468c;
+    color: #ffffff;
+    width: auto;
+    display: inline-block;    
+    border: none;
+    outline: none;
+}
+.big-feedback-btn{
+    margin: 10px 0;
 
+}
+.small-faq-caption-text{
+    font-size: 16px;
+    color: #666666;
+    line-height: 24px;
+}
+.faq{
+    list-style: none;
+    padding: 0;
+    -webkit-padding-start: 0;
+}
+.faq-item{
+    display: block;
+    margin: 0 0 20px 0;
+}
+.faq-dark-text{
+    color: #000000;
+    font-size: 16px;
+}
+.faq-light-text{
+    color: #999999;
+    font-size: 14px;
+    line-height: 16px;
+}
+.faq-link,
+.faq-link:active,
+.faq-link:focus,
+.faq-link:visited,
+.faq-link:hover{
+     color: #6699ff;
+    font-size: 14px;
+    line-height: 16px;
+    text-decoration: underline;
+}
 
 @media only screen 
 and (min-width : 240px)
@@ -1043,6 +1118,9 @@ and (orientation:landscape){
         font-size: 14px;
         line-height: 14px;
         margin: 3px 0;
+    }
+    .big-feedback-wrapper{
+        padding: 0 20px;
     }
 }
 
