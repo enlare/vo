@@ -705,6 +705,8 @@ hr {
 .feedback-textarea{
     padding: 5px;
     height: 83px;
+    max-height: 83px;
+     resize: none; 
     width: 100%;
     color: #cccccc;
     font-size: 14px;
@@ -808,6 +810,11 @@ h1{
     font-size: 14px;
     line-height: 16px;
     text-decoration: underline;
+}
+.big-feedback-textarea{
+    height: 155px !important;
+    max-height: 155px;
+     resize: none; 
 }
 
 @media only screen 
