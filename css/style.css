@@ -838,7 +838,11 @@ h1{
     padding: 0 20px 0 0;
 }
 .booking-col{
-    padding: 0 20px;
+    padding: 0 20px 0 15px;
+    width: 28%;
+}
+.booking-transfer-col{
+    width: 47%;
 }
 .dotted{
     border-right: 1px dotted #cdcdcd;
@@ -849,7 +853,36 @@ h1{
 .padding-15{
     padding: 0 15px;
 }
-
+.form-title{
+    color: #333333;
+    font-size: 18px;
+    line-height: 18px;
+    margin: 0 0 15px 0;
+}
+.custom-form-group{
+    margin: 0 0 5px 0;
+}
+.booking-label{
+    margin: 0 0 5px 0;
+    color: #00468c;
+    font-size: 16px;
+    line-height: 16px;
+}
+.booking-input{
+    height: 26px;
+    box-shadow:none;
+}
+.booking-select{
+    padding: 1px 5px 0 5px;
+}
+.transfer-title{
+    padding-left: 20px;
+}
+.transfer-subtitle{
+    font-size: 18px;
+    color:#00468c;
+    line-height: 18px;
+}
 
 @media only screen 
 and (min-width : 240px)
