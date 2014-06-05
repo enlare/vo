@@ -723,7 +723,7 @@ hr {
     padding: 5px;
     height: 83px;
     max-height: 83px;
-     resize: none; 
+    resize: none; 
     width: 100%;
     color: #cccccc;
     font-size: 14px;
@@ -823,7 +823,7 @@ h1{
 .faq-link:focus,
 .faq-link:visited,
 .faq-link:hover{
-     color: #6699ff;
+    color: #6699ff;
     font-size: 14px;
     line-height: 16px;
     text-decoration: underline;
@@ -831,8 +831,25 @@ h1{
 .big-feedback-textarea{
     height: 155px !important;
     max-height: 155px;
-     resize: none; 
+    resize: none; 
 }
+
+.booking-name-col{
+    padding: 0 20px 0 0;
+}
+.booking-col{
+    padding: 0 20px;
+}
+.dotted{
+    border-right: 1px dotted #cdcdcd;
+}
+.booking-transfer-col{
+    padding: 0;
+}
+.padding-15{
+    padding: 0 15px;
+}
+
 
 @media only screen 
 and (min-width : 240px)
@@ -1160,7 +1177,7 @@ and (orientation:landscape){
         padding: 0 30px;
     }
 
- .faq-wrapper, .big-feedback-wrapper{
+    .faq-wrapper, .big-feedback-wrapper{
         padding: 0 20px;
     }
     h1{
