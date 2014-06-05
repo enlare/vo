@@ -106,6 +106,7 @@ hr {
     font-size: 20px;
     font-family: 'Cuprum', sans-serif;
     padding: 0 23px 0 24px;
+    width: 100%;
 }
 .footer-menu-blocks .menu-item,
 .footer-menu-blocks .menu-item:hover,
@@ -465,7 +466,11 @@ hr {
 
 
 
-.preview-price{
+.preview-price,
+.preview-price:hover,
+.preview-price:active,
+.preview-price:focus,
+.preview-price:visited{
     font-size: 24px;
     line-height: 24px;
     padding: 5px 25px;
@@ -476,6 +481,7 @@ hr {
     display: inline-block;
     margin: 10px auto 0;
     font-family: 'Franklin Gothic Demi Cond', arial;
+    text-decoration: none;
 
 }
 .preview-wrapper{
@@ -529,7 +535,11 @@ hr {
 .col-main-preview:nth-child(2n) .preview-price{
     color: #24ac7a;
 }*/
-.preview-caption{
+.preview-caption,
+.preview-caption:hover,
+.preview-caption:focus,
+.preview-caption:active,
+.preview-caption:visited{
     background: #999999;
     color: #ffffff;
     border-radius: 4px;
@@ -538,6 +548,7 @@ hr {
     display: inline-block;
     width: auto;
     padding: 4px 30px;
+    text-decoration: none;
 }
 .link-wrapper{
 
@@ -591,11 +602,17 @@ hr {
 .feedback-title{
     margin: 0 0 15px 0;
 }
-.news-subtitle{
+.news-subtitle,
+.news-subtitle:hover,
+.news-subtitle:focus,
+.news-subtitle:active,
+.news-subtitle:visited{
     color: #ffffff;
     font-size: 18px;
     line-height: 18px;
     margin: 15px 0;
+    text-decoration: none;
+    display: inline-block;
 }
 .news-preview{
     color: #ffffff;
@@ -1129,6 +1146,12 @@ and (orientation:landscape){
     .big-feedback-wrapper{
         padding: 0 20px;
     }
+    .faq-wrapper{
+        padding: 0 20px;
+    }
+    h1{
+        margin-left: 20px;
+    }
 }
 
 
@@ -1137,7 +1160,12 @@ and (orientation:landscape){
         padding: 0 30px;
     }
 
-
+ .faq-wrapper, .big-feedback-wrapper{
+        padding: 0 20px;
+    }
+    h1{
+        margin-left: 20px;
+    }
 
 
 }
