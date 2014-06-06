@@ -27,8 +27,30 @@ $(document).ready(function() {
         $('body').scrollTop(0);
     });
     
-    $('.booking-select').selectpicker();
-//    доки тут 
-//    http://silviomoreto.github.io/bootstrap-select/
+   
 
+
+ $('#rooms-carousel-0').carousel({
+        interval: 4000
+    });
+// handles the carousel thumbnails
+    $(document).on('click', '.thumb-item-link', function() {
+        var sender = $(this);
+        var id = parseInt(sender.data('number'));
+        $('#rooms-carousel-0').carousel(id);
+        $('.thumb-img').removeClass('selected-thumb');
+        sender.find('.thumb-img').addClass('selected-thumb');
+    });
+
+// when the carousel slides, auto update
+    $('#rooms-carousel-0').on('slid.bs.carousel', function() {
+        var id = $('.item.active').data('slideNumber');
+        id = parseInt(id);
+        $('.thumb-img').removeClass('selected-thumb');
+        $('#carousel-selector-' + id).find('.thumb-img').addClass('selected-thumb');
+    });
+    
+// $('#slider-thumbs').carousel({
+////        interval: 1000
+//    });
 });
