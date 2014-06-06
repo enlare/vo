@@ -1,3 +1,12 @@
+function carouselClick(sender)
+{
+    var id = parseInt(sender.data('number'));
+    var carousel = sender.closest('.slider-wrapper').find('.rooms-carousel');
+    carousel.carousel(id);
+    carousel.closest('.slider-wrapper').find('.thumb-img').removeClass('selected-thumb');
+    sender.find('.thumb-img').addClass('selected-thumb');
+}
+
 $(document).ready(function() {
     $('#myCarousel').carousel({
         interval: 4000
@@ -28,24 +37,23 @@ $(document).ready(function() {
     });
 
 
-    $('#rooms-carousel-0').carousel({
-        interval: 4000
+    $('.rooms-carousel').carousel({
+//        interval: 4000
     });
 
 // когда ткнул пользователь 
     $(document).on('click', '.thumb-item-link', function() {
         var sender = $(this);
-        var id = parseInt(sender.data('number'));
-        $('#rooms-carousel-0').carousel(id);
-        $('.thumb-img').removeClass('selected-thumb');
-        sender.find('.thumb-img').addClass('selected-thumb');
+        carouselClick(sender);
     });
 
 // когда автоматически крутится
-    $('#rooms-carousel-0').on('slid.bs.carousel', function() {
-        var id = $('.item.active').data('slideNumber');
+    $('.rooms-carousel').on('slid.bs.carousel', function() {
+        var sender = $(this);
+        var id = sender.find('.item.active').data('slide-number');
         id = parseInt(id);
-        $('.thumb-img').removeClass('selected-thumb');
-        $('#carousel-selector-' + id).find('.thumb-img').addClass('selected-thumb');
+        var idThumb = sender.data('thumb-id');
+        $(idThumb + id).find('.thumb-img').addClass('selected-thumb');
     });
 });
+
