@@ -26,5 +26,9 @@ $(document).ready(function() {
      $(document).on('click touchstart', '.up', function() {
         $('body').scrollTop(0);
     });
+    
+    $('.booking-select').selectpicker();
+//    доки тут 
+//    http://silviomoreto.github.io/bootstrap-select/
 
 });

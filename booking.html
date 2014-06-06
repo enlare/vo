@@ -8,10 +8,12 @@
         <title>Master Hotel</title>
 
         <!-- Bootstrap -->
-        <link href="css/bootstrap.min.css" rel="stylesheet">
-        <link href="css/style.css" rel="stylesheet">
         <link href='http://fonts.googleapis.com/css?family=Cuprum:400,700&subset=cyrillic' rel='stylesheet' type='text/css'>
         <link href="http://allfont.ru/css/?fonts=franklin-gothic-demi-cond" rel="stylesheet" type="text/css" />
+        <link href="css/bootstrap.min.css" rel="stylesheet">
+        <link href="css/style.css" rel="stylesheet">
+        <link href="css/bootstrap-select.css" rel="stylesheet">
+
         <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
         <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
         <!--[if lt IE 9]>
@@ -102,194 +104,232 @@
             <div class="custom-container">
                 <h1>Online Бронирование</h1>
                 <hr />
+                <div class="booking-form-wrapper">
+                    <div class="clearfix">
+                        <div class="col-lg-3 col-md-6 col-sm-6 col-xs-12 booking-name-col dotted" >
+                            <div class="form-title">Контактное лицо</div>
 
-                <div class="clearfix">
-                    <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12 booking-name-col dotted" >
-                        <div class="form-title">Контактное лицо</div>
-                        <!--<form role="form">-->
-                        <div class="form-group custom-form-group">
-                            <label for="booking-lastname" class="custom-label booking-label">Фамилия *</label>
-                            <input type="text" class="custom-input booking-input form-control" id="booking-lastname"/>
-                        </div>
-                        <div class="form-group custom-form-group">
-                            <label for="booking-name" class="custom-label booking-label">Имя *</label>
-                            <input type="text" class="custom-input booking-input form-control" id="booking-name"/>
-                        </div>
-                        <div class="form-group custom-form-group">
-                            <label for="booking-phone" class="custom-label booking-label">Контактный телефон *</label>
-                            <input type="text" class="custom-input booking-input form-control" id="booking-phone"/>
-                        </div>
-                        <div class="form-group custom-form-group">
-                            <label for="booking-email" class="custom-label booking-label">E-mail *</label>
-                            <input type="text" class="custom-input booking-input form-control" id="booking-email"/>
-                        </div> 
-                        <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 no-padding-left" >
                             <div class="form-group custom-form-group">
-                                <label for="booking-children" class="custom-label booking-label">Дети</label>
-                                <input type="text" class="custom-input booking-input form-control" id="booking-children"/>
+                                <label for="booking-lastname" class="custom-label booking-label">Фамилия *</label>
+                                <input type="text" class="custom-input booking-input form-control" id="booking-lastname"/>
                             </div>
-                        </div>
-                        <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 no-padding-right" >
                             <div class="form-group custom-form-group">
-                                <label for="booking-children-age" class="custom-label booking-label">Возраст</label>
-                                <input type="text" class="custom-input booking-input form-control" id="booking-children-age"/>
+                                <label for="booking-name" class="custom-label booking-label">Имя *</label>
+                                <input type="text" class="custom-input booking-input form-control" id="booking-name"/>
                             </div>
+                            <div class="form-group custom-form-group">
+                                <label for="booking-phone" class="custom-label booking-label">Контактный телефон *</label>
+                                <input type="text" class="custom-input booking-input form-control" id="booking-phone"/>
+                            </div>
+                            <div class="form-group custom-form-group">
+                                <label for="booking-email" class="custom-label booking-label">E-mail *</label>
+                                <input type="text" class="custom-input booking-input form-control" id="booking-email"/>
+                            </div> 
+                            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 no-padding-left" >
+                                <div class="form-group custom-form-group no-margin-bottom">
+                                    <label for="booking-children" class="custom-label booking-label">Дети</label>
+                                    <input type="text" class="custom-input booking-input form-control" id="booking-children" placeholder="1"/>
+                                </div>
+                            </div>
+                            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 no-padding-right" >
+                                <div class="form-group custom-form-group no-margin-bottom">
+                                    <label for="booking-children-age" class="custom-label booking-label">Возраст</label>
+                                    <input type="text" class="custom-input booking-input form-control" id="booking-children-age"  placeholder="от 1 до 3" />
+                                </div>
+                            </div>
+
                         </div>
 
 
-                        <!--</form>-->
+                        <!--бронирование-->
+                        <div class=" col-md-6 col-sm-6 col-xs-12 booking-col dotted" >
+                            <div class="form-title">Заявка на бронирование</div>
+                            <div class="form-group custom-form-group">
+                                <label for="booking-choose-room" class="custom-label booking-label">Выбор номера *</label>
+                                <select class="booking-input booking-select form-control" id="booking-choose-room">
+                                    <option value="1">Семейный 2-местный</option>
+                                    <option value="2">Семейный 3-местный</option>
+                                    <option value="3">Семейный 4-местный</option>
+                                    <option value="4">Семейный 5-местный</option>
+                                </select>
+                            </div> 
+                            <div class="form-group custom-form-group">
+                                <label for="booking-peoples" class="custom-label booking-label">Кол-во персон *</label>
+                                <input type="text" class="custom-input booking-input form-control" id="booking-peoples"/>
+                            </div> 
+                            <div class="form-group custom-form-group">
+                                <label for="booking-city" class="custom-label booking-label">Из какого города *</label>
+                                <input type="text" class="custom-input booking-input form-control" id="booking-city"/>
+                            </div> 
+
+                            <!--дата-->
+                            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 no-padding-left" >
+                                <div class="form-group custom-form-group">
+                                    <label for="arrival-time" class="custom-label booking-label">Дата заезда *</label>
+                                    <div class="datepicker-wrapper">
+                                        <img src="css/img/datepicker.png" class="datepicker-icon" alt="" />
+                                        <input type="text" class="custom-input booking-input form-control datepicker" id="arrival-time"/>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 no-padding-right" >
+                                <div class="form-group custom-form-group">
+                                    <label for="departure-time" class="custom-label booking-label">Дата выезда *</label>
+                                    <div class="datepicker-wrapper">
+                                        <img src="css/img/datepicker.png" class="datepicker-icon" alt="" />
+                                        <input type="text" class="custom-input booking-input form-control datepicker" id="departure-time"/>
+                                    </div>
+                                </div>
+                            </div>
+                            <!--дата конец-->
+                            <!--время-->
+
+                            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 no-padding-left" >
+                                <div class="form-group custom-form-group no-margin-bottom">
+                                    <label for="arrival-time" class="custom-label booking-label">Время заезда *</label>
+                                    <input type="text" class="custom-input booking-input form-control" id="arrival-time"  placeholder="09:00"/>
+                                </div>
+                            </div>
+                            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 no-padding-right" >
+                                <div class="form-group custom-form-group no-margin-bottom">
+                                    <label for="departure-time" class="custom-label booking-label">Время выезда *</label>
+                                    <input type="text" class="custom-input booking-input form-control" id="departure-time" placeholder="23:00"/>
+                                </div>
+                            </div>
+                            <!--время конец-->
+
+                        </div>
+                        <!--бронирование конец-->
+
+
+                        <!--трансфер-->
+                        <div class="col-md-12 col-sm-12 col-xs-12 booking-transfer-col" >
+                            <div class="form-title transfer-title">Трансфер</div>
+                            <div class="clearfix">
+                                <!--левая колонка-->
+                                <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 dotted padding-15 transfer-col" >
+                                    <div class="transfer-subtitle">от Аэропорта до Отеля</div>
+                                    <div class="form-group custom-form-group">
+                                        <div class="checkbox custom-checkbox">
+                                            <label for="checkboxes-0">
+                                                <input type="checkbox" name="checkboxes" id="checkboxes-0" value="1">
+                                                От аэропорта Внуково
+                                            </label>
+                                        </div>
+                                        <div class="checkbox custom-checkbox">
+                                            <label for="checkboxes-1">
+                                                <input type="checkbox" name="checkboxes" id="checkboxes-1" value="2">
+                                                От аэропорта Домодедово
+                                            </label>
+                                        </div>
+                                        <div class="checkbox custom-checkbox">
+                                            <label for="checkboxes-2">
+                                                <input type="checkbox" name="checkboxes" id="checkboxes-2" value="2">
+                                                От аэропорта Шереметьего
+                                            </label>
+                                        </div>
+                                        <div class="checkbox custom-checkbox">
+                                            <label for="checkboxes-3">
+                                                <input type="checkbox" name="checkboxes" id="checkboxes-3" value="3">
+                                                Не нужен трансфер
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <!--время встречи-->
+                                    <div class="col-lg-8 col-md-8 col-sm-8 col-xs-8 no-padding-left" >
+                                        <div class="form-group custom-form-group">
+                                            <label for="meeting" class="custom-label booking-label">Время встречи *</label>
+                                            <input type="text" class="custom-input booking-input form-control" id="meeting"  placeholder="xx:xx"/>
+                                        </div>
+                                    </div>
+                                    <!--время встречи конец-->
+
+                                    <!--номер рейса
+                                    если нужно сделать инпут на всю ширину
+                                    просто уберите обертку  <div class="col-lg-8 col-md-8 col-sm-8 col-xs-8 no-padding-left" >
+                                    -->
+                                    <div class="col-lg-8 col-md-8 col-sm-8 col-xs-8 no-padding-left" >
+                                        <div class="form-group custom-form-group">
+                                            <label for="flight-number" class="custom-label booking-label">№ рейса *</label>
+                                            <input type="text" class="custom-input booking-input form-control" id="flight-number"  placeholder="0000"/>
+                                        </div>
+                                    </div>
+                                    <!--номер рейса конец-->
+                                </div>
+                                <!--левая колонка конец-->
+
+                                <!--правая колонка-->
+                                <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 padding-15 transfer-col" >
+                                    <div class="transfer-subtitle">от Отеля до Аэропорта</div>
+                                    <div class="form-group custom-form-group">
+                                        <div class="checkbox custom-checkbox">
+                                            <label for="checkboxes-4">
+                                                <input type="checkbox" name="checkboxes" id="checkboxes-4" value="4">
+                                                До аэропорта Внуково
+                                            </label>
+                                        </div>
+                                        <div class="checkbox custom-checkbox">
+                                            <label for="checkboxes-5">
+                                                <input type="checkbox" name="checkboxes" id="checkboxes-5" value="5">
+                                                До аэропорта Домодедово
+                                            </label>
+                                        </div>
+                                        <div class="checkbox custom-checkbox">
+                                            <label for="checkboxes-6">
+                                                <input type="checkbox" name="checkboxes" id="checkboxes-6" value="6">
+                                                До аэропорта Шереметьего
+                                            </label>
+                                        </div>
+                                        <div class="checkbox custom-checkbox">
+                                            <label for="checkboxes-7">
+                                                <input type="checkbox" name="checkboxes" id="checkboxes-7" value="7">
+                                                Не нужен трансфер
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <!--время встречи-->
+                                    <div class="col-lg-8 col-md-8 col-sm-8 col-xs-8 no-padding-left" >
+                                        <div class="form-group custom-form-group">
+                                            <label for="meeting" class="custom-label booking-label">Время встречи *</label>
+                                            <input type="text" class="custom-input booking-input form-control" id="meeting"  placeholder="xx:xx"/>
+                                        </div>
+                                    </div>
+                                    <!--время встречи конец-->
+
+                                    <!--номер рейса
+                                    если нужно сделать инпут на всю ширину
+                                    просто уберите обертку  <div class="col-lg-8 col-md-8 col-sm-8 col-xs-8 no-padding-left" >
+                                    -->
+                                    <div class="col-lg-8 col-md-8 col-sm-8 col-xs-8 no-padding-left" >
+                                        <div class="form-group custom-form-group">
+                                            <label for="flight-number" class="custom-label booking-label">№ рейса *</label>
+                                            <input type="text" class="custom-input booking-input form-control" id="flight-number"  placeholder="0000"/>
+                                        </div>
+                                    </div>
+                                    <!--номер рейса конец-->
+                                </div>
+                                <!--правая колонка конец-->
+                            </div>
+                            <div class="transfer-text">Трансфер из Внуково и обратно БЕСПЛАТНО*</div>
+                        </div>
+
+
                     </div>
-                    <div class=" col-md-3 col-sm-6 col-xs-12 booking-col dotted" >
-                        <div class="form-title">Заявка на бронирование</div>
-                        <div class="form-group custom-form-group">
-                            <label for="booking-choose-room" class="custom-label booking-label">Выбор номера *</label>
-                            <select class="booking-input booking-select form-control" id="booking-choose-room">
-                                <option value="1">Семейный 2-местный</option>
-                            </select>
-                        </div> 
-                        <div class="form-group custom-form-group">
-                            <label for="booking-peoples" class="custom-label booking-label">Кол-во персон *</label>
-                            <input type="text" class="custom-input booking-input form-control" id="booking-peoples"/>
-                        </div> 
-                        <div class="form-group custom-form-group">
-                            <label for="booking-city" class="custom-label booking-label">Из какого города *</label>
-                            <input type="text" class="custom-input booking-input form-control" id="booking-city"/>
-                        </div> 
-
-                        <!--дата-->
-                        <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 no-padding-left" >
-                            <div class="form-group custom-form-group">
-                                <label for="arrival-time" class="custom-label booking-label">Дата заезда *</label>
-                                <input type="text" class="custom-input booking-input form-control" id="arrival-time"/>
-                            </div>
-                        </div>
-                        <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 no-padding-right" >
-                            <div class="form-group custom-form-group">
-                                <label for="departure-time" class="custom-label booking-label">Дата выезда *</label>
-                                <input type="text" class="custom-input booking-input form-control" id="departure-time"/>
-                            </div>
-                        </div>
-                        <!--дата конец-->
-                        <!--время-->
-
-                        <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 no-padding-left" >
-                            <div class="form-group custom-form-group">
-                                <label for="arrival-time" class="custom-label booking-label">Время заезда *</label>
-                                <input type="text" class="custom-input booking-input form-control" id="arrival-time"/>
-                            </div>
-                        </div>
-                        <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 no-padding-right" >
-                            <div class="form-group custom-form-group">
-                                <label for="departure-time" class="custom-label booking-label">Время выезда *</label>
-                                <input type="text" class="custom-input booking-input form-control" id="departure-time"/>
-                            </div>
-                        </div>
-                        <!--время конец-->
-
+                    <div class="gray-text">
+                        Поля отмеченные * обязательны для заполнения
                     </div>
-                    <div class="col-md-3 col-sm-6 col-xs-12 booking-transfer-col" >
-                        <div class="form-title transfer-title">Трансфер</div>
-                        <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12 dotted padding-15" >
-                            <div class="transfer-subtitle">от Аэропорта до Отеля</div>
-                            <div class="form-group custom-form-group">
-                                <div class="checkbox">
-                                    <label for="checkboxes-0">
-                                        <input type="checkbox" name="checkboxes" id="checkboxes-0" value="1">
-                                        От аэропорта Внуково
-                                    </label>
-                                </div>
-                                <div class="checkbox">
-                                    <label for="checkboxes-1">
-                                        <input type="checkbox" name="checkboxes" id="checkboxes-1" value="2">
-                                        От аэропорта Домодедово
-                                    </label>
-                                </div>
-                                 <div class="checkbox">
-                                    <label for="checkboxes-1">
-                                        <input type="checkbox" name="checkboxes" id="checkboxes-1" value="2">
-                                        От аэропорта Шереметьего
-                                    </label>
-                                </div>
-                                 <div class="checkbox">
-                                    <label for="checkboxes-1">
-                                        <input type="checkbox" name="checkboxes" id="checkboxes-1" value="2">
-                                        Не нужен трансфер
-                                    </label>
-                                </div>
-                            </div>
-                            <!--время встречи-->
-                            <div class="col-lg-8 col-md-8 col-sm-8 col-xs-8 no-padding-left" >
-                                <div class="form-group custom-form-group">
-                                    <label for="meeting" class="custom-label booking-label">Время встречи *</label>
-                                    <input type="text" class="custom-input booking-input form-control" id="meeting"/>
-                                </div>
-                            </div>
-                            <!--время встречи конец-->
-
-                            <!--номер рейса
-                            если нужно сделать инпут на всю ширину
-                            просто уберите обертку  <div class="col-lg-8 col-md-8 col-sm-8 col-xs-8 no-padding-left" >
-                            -->
-                            <div class="col-lg-8 col-md-8 col-sm-8 col-xs-8 no-padding-left" >
-                                <div class="form-group custom-form-group">
-                                    <label for="flight-number" class="custom-label booking-label">№ рейса *</label>
-                                    <input type="text" class="custom-input booking-input form-control" id="flight-number"/>
-                                </div>
-                            </div>
-                            <!--номер рейса конец-->
-                        </div>
-                        <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12 padding-15" >
-                            <div class="transfer-subtitle">от Отеля до Аэропорта</div>
-                            <div class="form-group custom-form-group">
-                                <div class="checkbox">
-                                    <label for="checkboxes-0">
-                                        <input type="checkbox" name="checkboxes" id="checkboxes-0" value="1">
-                                        До аэропорта Внуково
-                                    </label>
-                                </div>
-                                <div class="checkbox">
-                                    <label for="checkboxes-1">
-                                        <input type="checkbox" name="checkboxes" id="checkboxes-1" value="2">
-                                        До аэропорта Домодедово
-                                    </label>
-                                </div>
-                                 <div class="checkbox">
-                                    <label for="checkboxes-1">
-                                        <input type="checkbox" name="checkboxes" id="checkboxes-1" value="2">
-                                        До аэропорта Шереметьего
-                                    </label>
-                                </div>
-                                 <div class="checkbox">
-                                    <label for="checkboxes-1">
-                                        <input type="checkbox" name="checkboxes" id="checkboxes-1" value="2">
-                                        Не нужен трансфер
-                                    </label>
-                                </div>
-                            </div>
-                            <!--время встречи-->
-                            <div class="col-lg-8 col-md-8 col-sm-8 col-xs-8 no-padding-left" >
-                                <div class="form-group custom-form-group">
-                                    <label for="meeting" class="custom-label booking-label">Время встречи *</label>
-                                    <input type="text" class="custom-input booking-input form-control" id="meeting"/>
-                                </div>
-                            </div>
-                            <!--время встречи конец-->
-
-                            <!--номер рейса
-                            если нужно сделать инпут на всю ширину
-                            просто уберите обертку  <div class="col-lg-8 col-md-8 col-sm-8 col-xs-8 no-padding-left" >
-                            -->
-                            <div class="col-lg-8 col-md-8 col-sm-8 col-xs-8 no-padding-left" >
-                                <div class="form-group custom-form-group">
-                                    <label for="flight-number" class="custom-label booking-label">№ рейса *</label>
-                                    <input type="text" class="custom-input booking-input form-control" id="flight-number"/>
-                                </div>
-                            </div>
-                            <!--номер рейса конец-->
-                        </div>
+                    <div>
+                        <button type="submit" class="blue-btn big-feedback-btn">Отправить заявку</button>
                     </div>
                 </div>
-                <button type="submit" class="blue-btn big-feedback-btn">Отправить</button>
+                <div class="booking-bottom-text">
+                    <p>
+                        Далеко-далеко за словесными горами в стране гласных и согласных живут рыбные тексты. Вдали от всех живут они в буквенных домах на берегу Семантика большого языкового океана. Маленький ручеек Даль журчит по всей стране и обеспечивает ее всеми необходимыми правилами. Эта парадигматическая страна, в которой жаренные члены предложения залетают прямо в рот.</p>
+                    <p>
+                         Даже всемогущая пунктуация не имеет власти над рыбными текстами, ведущими безорфографичный образ жизни. Однажды одна маленькая строчка рыбного текста по имени Lorem ipsum решила выйти в большой мир грамматики. Великий Оксмокс предупреждал ее о злых запятых, диких знаках вопроса и коварных точках с запятой
+                    </p>
+                </div>
+
             </div>
             <div class="dark padding-dark">
                 <div class="custom-container">
@@ -470,6 +510,7 @@
 
         <!-- Include all compiled plugins (below), or include individual files as needed -->
         <script src="js/bootstrap.min.js"></script>
+        <script src="js/bootstrap-select.js"></script>
         <script src="js/script.js"></script>
     </body>
 </html>

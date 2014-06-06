@@ -85,11 +85,11 @@ hr {
     height: 150px;
 }
 .menu-blocks{
-    background: #00468c;
+    /*background: #00468c;*/
     color: #ffffff;
 }
 .footer-menu-blocks{
-    background: transparent;
+    /*background: transparent;*/
 }
 
 
@@ -120,6 +120,10 @@ hr {
 .top-menu-blocks  .menu-item:hover{
     background: #6699ff;
 }
+.top-menu-blocks .menu-item{
+    background: #00468c;
+}
+
 
 .social-links{
     background: url(img/social.png) 0 0 no-repeat;
@@ -837,13 +841,13 @@ h1{
 .booking-name-col{
     padding: 0 20px 0 0;
 }
-.booking-col{
+/*.booking-col{
     padding: 0 20px 0 15px;
     width: 28%;
 }
 .booking-transfer-col{
     width: 47%;
-}
+}*/
 .dotted{
     border-right: 1px dotted #cdcdcd;
 }
@@ -857,7 +861,7 @@ h1{
     color: #333333;
     font-size: 18px;
     line-height: 18px;
-    margin: 0 0 15px 0;
+    margin: 0 0 6px 0;
 }
 .custom-form-group{
     margin: 0 0 5px 0;
@@ -876,13 +880,61 @@ h1{
     padding: 1px 5px 0 5px;
 }
 .transfer-title{
-    padding-left: 20px;
+    padding-left: 14px;
 }
 .transfer-subtitle{
     font-size: 18px;
     color:#00468c;
     line-height: 18px;
+    margin-bottom: 9px;
 }
+.datepicker-wrapper{
+    width: auto;
+    position: relative;
+}
+.datepicker{
+    padding-right: 20px;
+    background: none;
+}
+.datepicker-icon{
+    position: absolute;
+    right: 5px;
+    bottom: 5px;
+}
+.transfer-text{
+    font-size: 16px;
+    line-height: 16px;
+    color: #00468c;
+    margin: 20px 0 0 15px;
+}
+.no-margin-bottom{
+    margin-bottom: 0;
+}
+.custom-checkbox{
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+.booking-form-wrapper{
+    border-bottom: 1px solid #6699ff;
+    padding-bottom: 7px;
+    margin-bottom: 17px;
+}
+.gray-text{
+    color: #666666;
+    font-size: 16px;
+    line-height: 16px;
+    margin: 15px 0 3px 0;
+}
+.booking-bottom-text p{
+    color: #333333;
+    font-size: 12px;
+    font-family: Tahoma,Geneva,Kalimati,sans-serif;
+    margin-bottom: 25px;
+}
+input.booking-input::-webkit-input-placeholder { font-size:16px; color: #999999; text-align: center; }
+input.booking-input::-moz-placeholder { font-size:16px; color: #999999; text-align: center;}
+input.booking-input:-ms-input-placeholder { font-size:16px; color: #999999; text-align: center;}
+
 
 @media only screen 
 and (min-width : 240px)
@@ -1202,6 +1254,36 @@ and (orientation:landscape){
     h1{
         margin-left: 20px;
     }
+    .booking-name-col{
+        padding: 0 10px;
+    }
+    .big-feedback-btn{
+        margin: 10px;
+    }
+    .transfer-title, .gray-text{
+        padding-left: 20px;
+    }
+    .form-title{
+        margin-top: 10px;
+    }
+
+    transfer-title {
+        margin: 20px 0 20px 7px;
+    }
+
+    .transfer-col{
+        padding: 0 20px;
+    }
+    .booking-name-col, .booking-col, 
+    .booking-bottom-text{
+        padding: 0 20px;
+    }
+    .transfer-text,  .big-feedback-btn{
+        margin-left: 20px;
+    }
+    .blue{
+        padding: 15px 20px 10px 20px;
+    }
 }
 
 
@@ -1215,6 +1297,39 @@ and (orientation:landscape){
     }
     h1{
         margin-left: 20px;
+    }
+    .col-custom-menu{
+        padding: 0;
+    }
+    .booking-name-col{
+        padding: 0 10px;
+    }
+    .big-feedback-btn{
+        margin: 10px;
+    }
+    .gray-text{
+        padding-left: 20px;
+    }
+    .form-title{
+        margin-top: 10px;
+    }
+
+    transfer-title {
+        margin: 20px 0 20px 7px;
+    }
+
+    .transfer-col{
+        padding: 0 20px;
+    }
+    .booking-name-col, .booking-col, 
+    .booking-bottom-text{
+        padding: 0 20px;
+    }
+    .transfer-text,  .big-feedback-btn{
+        margin-left: 20px;
+    }
+    .blue{
+        padding: 15px 20px 10px 20px;
     }
 
 
@@ -1290,6 +1405,9 @@ and (orientation : portrait) { /* STYLES GO HERE */
 }
 @media (min-width: 768px) and (max-width: 1024px) 
 and (orientation:landscape){
+    .transfer-title{
+        margin: 20px 0;
+    }
     .dotted-border{
         border-right: 1px dotted #ffffff !important;
     }
@@ -1317,6 +1435,14 @@ and (orientation:landscape){
         .news-row .news-preview:nth-child(2n){
             margin:  0 20px 10px 20px!important;
         }*/
+    .booking-col{
+        width: 50% !important;
+        padding: 0 10px!important;
+        border: none!important;
+    }
+    .booking-transfer-col{
+        width: 100% !important;
+    }
 }
 
 
@@ -1328,6 +1454,13 @@ and (orientation:landscape){
     }
     .dotted-border{
         border-right: 1px dotted #ffffff;
+    }
+    .booking-col{
+        padding: 0 20px 0 15px;
+        width: 28%;
+    }
+    .booking-transfer-col{
+        width: 47%;
     }
 
 }
