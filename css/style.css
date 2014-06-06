@@ -116,12 +116,13 @@ hr {
     padding: 0 16px 0 20px;
 }
 
+
+.top-menu-blocks .menu-item{
+    background: #00468c;
+}
 .top-menu-blocks .active-menu-item,
 .top-menu-blocks  .menu-item:hover{
     background: #6699ff;
-}
-.top-menu-blocks .menu-item{
-    background: #00468c;
 }
 
 
