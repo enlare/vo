@@ -10,10 +10,11 @@ function carouselClick(sender)
 
 function swipe(sender)
 {
+    sender.closest('.slider-wrapper').find('.thumb-img').removeClass('selected-thumb');
     var id = sender.find('.item.active').data('slide-number');
     id = parseInt(id);
     var idThumb = sender.data('thumb-id');
-    sender.closest('.slider-wrapper').find('.thumb-img').removeClass('selected-thumb');
+
     $('#' + idThumb + id).find('.thumb-img').addClass('selected-thumb');
 }
 
@@ -64,7 +65,7 @@ $(document).ready(function() {
         var id = sender.find('.item.active').data('slide-number');
         id = parseInt(id);
         var idThumb = sender.data('thumb-id');
-        $('#'+idThumb + id).find('.thumb-img').addClass('selected-thumb');
+        $('#' + idThumb + id).find('.thumb-img').addClass('selected-thumb');
     });
 
 
