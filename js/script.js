@@ -3,8 +3,8 @@ function carouselClick(sender)
     var id = parseInt(sender.data('number'));
     var carousel = sender.closest('.slider-wrapper').find('.rooms-carousel');
     carousel.carousel(id);
-    carousel.closest('.slider-wrapper').find('.thumb-img').removeClass('selected-thumb');
-    sender.find('.thumb-img').addClass('selected-thumb');
+//   carousel.closest('.slider-wrapper').find('.thumb-img').removeClass('selected-thumb');
+//    sender.find('.thumb-img').addClass('selected-thumb');
 }
 
 
@@ -62,6 +62,8 @@ $(document).ready(function() {
 // когда автоматически крутится
     $('.rooms-carousel').on('slid.bs.carousel', function() {
         var sender = $(this);
+        sender.closest('.slider-wrapper').find('.thumb-img').removeClass('selected-thumb');
+         
         var id = sender.find('.item.active').data('slide-number');
         id = parseInt(id);
         var idThumb = sender.data('thumb-id');
