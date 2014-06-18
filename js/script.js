@@ -22,7 +22,7 @@ function swipe(sender)
 //прокрутка каруселей колесом мыши
 function mouseWheel(sender, event)
 {
-    //листаем вперед
+    //листаем назад
     if (event.deltaY > 0)
     {
         swipe(sender);
@@ -30,7 +30,7 @@ function mouseWheel(sender, event)
     }
     else
     {
-        //назад
+        //вперед
         swipe(sender);
         sender.carousel('next');
     }
@@ -96,14 +96,23 @@ $(document).ready(function() {
 
 
 
-//листалка карусели номеров на тач устройствах
+//листалка карусели номеров на тач устройствах (для главной картинки)
     $('.rooms-carousel').swiperight(function() {
         var sender = $(this);
         swipe(sender);
-        $(this).carousel('prev');
+        sender.carousel('prev');
     }).swipeleft(function() {
         var sender = $(this);
         swipe(sender);
+        sender.carousel('next');
+    });
+
+//листалка карусели номеров на тач устройствах (для превьюшек)
+    $('.slider-thumbs').swiperight(function() {
+        var sender = $(this).closest('.slider-wrapper').find('.rooms-carousel');
+        sender.carousel('prev');
+    }).swipeleft(function() {
+        var sender = $(this).closest('.slider-wrapper').find('.rooms-carousel');
         sender.carousel('next');
     });
 
@@ -112,17 +121,38 @@ $(document).ready(function() {
     $('#myCarousel').swiperight(function() {
         var sender = $(this);
         swipe(sender);
-        $(this).carousel('prev');
+        sender.carousel('prev');
     }).swipeleft(function() {
         var sender = $(this);
         swipe(sender);
         sender.carousel('next');
     });
 
-//прокрутка колесом на номерах
+
+
+//прокрутка колесом на номерах (основная картинка)
     $('.rooms-carousel').mousewheel(function(event, delta) {
         var sender = $(this);
         mouseWheel(sender, event);
+    });
+
+
+    //прокрутка колесом на номерах (превьюшки)
+    $('.slider-thumbs').mousewheel(function(event, delta) {
+        var sender = $(this).closest('.slider-wrapper').find('.rooms-carousel');
+        //листаем назад
+        if (event.deltaY > 0)
+        {
+            sender.carousel('prev');
+        }
+        else
+        {
+            //вперед
+            sender.carousel('next');
+        }
+
+        //запрет скрола страницы, пока курсор над большой картинкой карусели
+        event.preventDefault();
     });
 
     //прокрутка колесом на главной
@@ -130,6 +160,10 @@ $(document).ready(function() {
         var sender = $(this);
         mouseWheel(sender, event);
     });
+
+
+
+
 });
 
 
