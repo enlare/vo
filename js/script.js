@@ -57,13 +57,18 @@ $(document).ready(function() {
     });
     
     
-     $("#rooms-carousel-0").swiperight(function() {
-      $("#rooms-carousel-0").carousel('prev');
-    });
-    
-   $("#rooms-carousel-0").swipeleft(function() {
-      $("#rooms-carousel-0").carousel('next');
-   });
-    
+//     $("#rooms-carousel-0").swiperight(function() {
+//      $("#rooms-carousel-0").carousel('prev');
+//    });
+//    
+//   $("#rooms-carousel-0").swipeleft(function() {
+//      $("#rooms-carousel-0").carousel('next');
+//   });
+     $(".rooms-carousel").swiperight(function() {
+            $(this).carousel('prev');
+        })
+        .swipeleft(function() {
+            $(this).carousel('next');
+        });
 });
 
