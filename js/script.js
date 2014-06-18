@@ -32,7 +32,7 @@ $(document).ready(function() {
         map.geoObjects.add(metka);
     }
 
-    $(document).on('click touchend', '.up', function() {
+    $(document).on('click touchstart', '.up', function() {
         $('body').scrollTop(0);
     });
 
@@ -42,7 +42,7 @@ $(document).ready(function() {
     });
 
 // когда ткнул пользователь 
-    $(document).on('click touchend', '.thumb-item-link', function() {
+    $(document).on('click touchstart', '.thumb-item-link', function() {
         var sender = $(this);
         carouselClick(sender);
     });
@@ -65,9 +65,10 @@ $(document).ready(function() {
 //      $("#rooms-carousel-0").carousel('next');
 //   });
      $(".rooms-carousel").swiperight(function() {
+         alert('1');
             $(this).carousel('prev');
-        })
-        .swipeleft(function() {
+        }).swipeleft(function() {
+            alert('2');
             $(this).carousel('next');
         });
 });
