@@ -7,6 +7,17 @@ function carouselClick(sender)
     sender.find('.thumb-img').addClass('selected-thumb');
 }
 
+
+function swipe(sender)
+{
+    var id = sender.find('.item.active').data('slide-number');
+    id = parseInt(id);
+    var idThumb = sender.data('thumb-id');
+    sender.closest('.slider-wrapper').find('.thumb-img').removeClass('selected-thumb');
+    $('#' + idThumb + id).find('.thumb-img').addClass('selected-thumb');
+}
+
+
 $(document).ready(function() {
     $('#myCarousel').carousel({
         interval: 4000
@@ -44,7 +55,6 @@ $(document).ready(function() {
 // когда ткнул пользователь 
     $(document).on('click touchstart', '.thumb-item-link', function() {
         var sender = $(this);
-    //    alert('3333');
         carouselClick(sender);
     });
 
@@ -54,36 +64,20 @@ $(document).ready(function() {
         var id = sender.find('.item.active').data('slide-number');
         id = parseInt(id);
         var idThumb = sender.data('thumb-id');
-        $(idThumb + id).find('.thumb-img').addClass('selected-thumb');
+        $('#'+idThumb + id).find('.thumb-img').addClass('selected-thumb');
     });
-    
-    
-//     $("#rooms-carousel-0").swiperight(function() {
-//      $("#rooms-carousel-0").carousel('prev');
-//    });
-//    
-//   $("#rooms-carousel-0").swipeleft(function() {
-//      $("#rooms-carousel-0").carousel('next');
-//   });
-     $(".rooms-carousel").swiperight(function() {
-//         alert('1');
-        // alert($(this).attr('id'));
-            $(this).carousel('prev');
-             var sender = $(this);
-                     var id = sender.find('.item.active').data('slide-number');
-                    // alert(id);
-                             id = parseInt(id);
-                                     var idThumb = sender.data('thumb-id');
-                                //     alert(idThumb);
-                                             $(idThumb + id).find('.thumb-img').addClass('selected-thumb');
-        }).swipeleft(function() {
-             var sender = $(this);
-             var id = sender.find('.item.active').data('slide-number');
-             id = parseInt(id);
-           var idThumb = sender.data('thumb-id');
-           sender.closest('.slider-wrapper').find('.thumb-img').removeClass('selected-thumb');
-         $('#'+idThumb + id).find('.thumb-img').addClass('selected-thumb');
-         sender.carousel('next');
-        });
+
+
+    $(".rooms-carousel").swiperight(function() {
+        var sender = $(this);
+        swipe(sender);
+        $(this).carousel('prev');
+    }).swipeleft(function() {
+        var sender = $(this);
+        swipe(sender);
+        sender.carousel('next');
+    });
 });
+
+
 
