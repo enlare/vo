@@ -19,6 +19,28 @@ function swipe(sender)
 }
 
 
+//прокрутка каруселей колесом мыши
+function mouseWheel(sender, event)
+{
+    //листаем вперед
+    if (event.deltaY > 0)
+    {
+        swipe(sender);
+        sender.carousel('prev');
+    }
+    else
+    {
+        //назад
+        swipe(sender);
+        sender.carousel('next');
+    }
+
+    //запрет скрола страницы, пока курсор над большой картинкой карусели
+    event.preventDefault();
+}
+
+
+
 $(document).ready(function() {
     $('#myCarousel').carousel({
         interval: 4000
@@ -75,7 +97,7 @@ $(document).ready(function() {
 
 
 //листалка карусели номеров на тач устройствах
-    $(".rooms-carousel").swiperight(function() {
+    $('.rooms-carousel').swiperight(function() {
         var sender = $(this);
         swipe(sender);
         $(this).carousel('prev');
@@ -85,27 +107,32 @@ $(document).ready(function() {
         sender.carousel('next');
     });
 
-    $(".rooms-carousel").mousewheel(function(event, delta) {
-        var sender = $(this);
-        //листаем вперед
-        if (event.deltaY > 0)
-        {
-            swipe(sender);
-            $(this).carousel('prev');
-        }
-        else
-        {
-            //назад
-            swipe(sender);
-            sender.carousel('next');
-        }
 
-        //запрет скрола страницы, пока курсор над большой картинкой карусели
-        event.preventDefault();
+    //свайп на главной странице
+    $('#myCarousel').swiperight(function() {
+        var sender = $(this);
+        swipe(sender);
+        $(this).carousel('prev');
+    }).swipeleft(function() {
+        var sender = $(this);
+        swipe(sender);
+        sender.carousel('next');
     });
 
+//прокрутка колесом на номерах
+    $('.rooms-carousel').mousewheel(function(event, delta) {
+        var sender = $(this);
+        mouseWheel(sender, event);
+    });
 
+    //прокрутка колесом на главной
+    $('#myCarousel').mousewheel(function(event) {
+        var sender = $(this);
+        mouseWheel(sender, event);
+    });
 });
+
+
 
 
 
