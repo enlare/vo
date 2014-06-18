@@ -1,13 +1,13 @@
+// когда кликаем на thumbnail карусели
 function carouselClick(sender)
 {
     var id = parseInt(sender.data('number'));
     var carousel = sender.closest('.slider-wrapper').find('.rooms-carousel');
     carousel.carousel(id);
-//   carousel.closest('.slider-wrapper').find('.thumb-img').removeClass('selected-thumb');
-//    sender.find('.thumb-img').addClass('selected-thumb');
 }
 
 
+//листает слайды для тач устройств и при прокрутке колесом
 function swipe(sender)
 {
     sender.closest('.slider-wrapper').find('.thumb-img').removeClass('selected-thumb');
@@ -44,26 +44,28 @@ $(document).ready(function() {
         map.geoObjects.add(metka);
     }
 
+    //кнопка вверх (в футере)
     $(document).on('click touchstart', '.up', function() {
         $('body').scrollTop(0);
     });
 
 
     $('.rooms-carousel').carousel({
-//        interval: 4000
+        //так она не крутится автоматически
+        interval: false
     });
 
-// когда ткнул пользователь 
+// когда ткнул пользователь в thumbnails 
     $(document).on('click touchstart', '.thumb-item-link', function() {
         var sender = $(this);
         carouselClick(sender);
     });
 
-// когда автоматически крутится
+// отмечается активный thumbnail при прокрутке слайдов
     $('.rooms-carousel').on('slid.bs.carousel', function() {
         var sender = $(this);
         sender.closest('.slider-wrapper').find('.thumb-img').removeClass('selected-thumb');
-         
+
         var id = sender.find('.item.active').data('slide-number');
         id = parseInt(id);
         var idThumb = sender.data('thumb-id');
@@ -71,6 +73,8 @@ $(document).ready(function() {
     });
 
 
+
+//листалка карусели номеров на тач устройствах
     $(".rooms-carousel").swiperight(function() {
         var sender = $(this);
         swipe(sender);
@@ -80,6 +84,27 @@ $(document).ready(function() {
         swipe(sender);
         sender.carousel('next');
     });
+
+    $(".rooms-carousel").mousewheel(function(event, delta) {
+        var sender = $(this);
+        //листаем вперед
+        if (event.deltaY > 0)
+        {
+            swipe(sender);
+            $(this).carousel('prev');
+        }
+        else
+        {
+            //назад
+            swipe(sender);
+            sender.carousel('next');
+        }
+
+        //запрет скрола страницы, пока курсор над большой картинкой карусели
+        event.preventDefault();
+    });
+
+
 });
 
 
