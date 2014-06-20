@@ -289,7 +289,7 @@ hr {
 
 
 
-.thumb-img{
+.thumb-item  .thumb-img{
     /* IE 8 */
     -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=50)";
 
@@ -305,7 +305,7 @@ hr {
     /* Good browsers */
     opacity: 0.5;
 }
-.selected-thumb{
+.selected-thumb  .thumb-img{
     /* IE 8 */
     -ms-filter: none;
 
