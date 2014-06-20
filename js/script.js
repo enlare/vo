@@ -8,52 +8,37 @@ function carouselClick(sender)
 
 
 //листает слайды для тач устройств и при прокрутке колесом
-function swipe(sender, direction)
+function setActiveThumb(sender)
 {
-//    sender.on('slide.bs.carousel', function () {
-//  alert('eee');
-//});
     var wrapper = sender.closest('.slider-wrapper');
     wrapper.find('.thumb-img').removeClass('selected-thumb');
-    wrapper.find('.thumb-item').removeClass('thumb-item-active');
     var id = sender.find('.item.active').data('slide-number');
     id = parseInt(id);
-//    console.log(id);
     var idThumb = sender.data('thumb-id');
-
-  
-    var cloneFirst = wrapper.find('.custom-slider-thumb').find('.thumb-item').eq(0);
-    var offset = cloneFirst.width();
-//    console.log(cloneFirst);
-    wrapper.find('.custom-slider-thumb').find('.thumb-item').eq(0).remove();
-     wrapper.find('.custom-slider-thumb').append(cloneFirst);
-//     wrapper.find('.custom-slider-thumb').find('.thumb-item').eq(id).addClass('thumb-item-active').find('.thumb-img').addClass('selected-thumb');
     $('#' + idThumb + id).find('.thumb-img').addClass('selected-thumb');
-    $('#' + idThumb + id).parent().addClass('thumb-item-active');
-//    console.log($('#' + idThumb + id).find('.thumb-img'), $('#' + idThumb + id).parent());
 }
 
 
-//прокрутка каруселей колесом мыши
+
+/**
+ * 
+ * @param {type} sender - карусель верхняя
+ * @param {type} event - событие прокрутки колесом
+ * прокрутка каруселей колесом мыши над большой картинкой
+ * как на главной, так и на номерах
+ */
 function mouseWheel(sender, event)
 {
     //листаем назад
     if (event.deltaY > 0)
     {
-
         sender.carousel('prev');
-//                swipe(sender, 'prev');
-
     }
     else
     {
         //вперед 
-
         sender.carousel('next');
-//                swipe(sender, 'next');
-
     }
-
     //запрет скрола страницы, пока курсор над большой картинкой карусели
     event.preventDefault();
 }
@@ -61,8 +46,37 @@ function mouseWheel(sender, event)
 
 
 $(document).ready(function() {
+
+    //на главной карусель
     $('#myCarousel').carousel({
         interval: 4000
+    });
+
+
+
+
+    $("#foo").carouFredSel({
+        items: {
+            visible: 4,
+            minimum: 4
+        },
+        auto: false,
+        swipe: true,
+        mousewheel: true,
+        scroll: {
+            items: 1,
+            onAfter: function(data)
+            {
+                if (data.scroll.direction == 'prev')
+                {
+                    $('.rooms-carousel').carousel('prev');
+                }
+                else
+                {
+                    $('.rooms-carousel').carousel('next');
+                }
+            }
+        }
     });
 
     ymaps.ready(init);
@@ -92,89 +106,101 @@ $(document).ready(function() {
 
 
     $('.rooms-carousel').carousel({
-        //так она не крутится автоматически
+        //так они не крутятся автоматически
         interval: false
     });
 
-// когда ткнул пользователь в thumbnails 
-    $(document).on('click touchstart', '.thumb-item-link', function() {
-        var sender = $(this);
-        carouselClick(sender);
+
+    /**
+     * когда ткнул пользователь в thumbnails 
+     */
+//    $(document).on('click touchstart', '.thumb-item-link', function() {
+//        var sender = $(this);
+//        carouselClick(sender);
+//    });
+
+// 
+    /**
+     * вызывает смену функции смены превью, 
+     * только после того как прокрутит большую картинку
+     */
+    $('.rooms-carousel').on('slid.bs.carousel', function() {
+        setActiveThumb($(this));
     });
 
-// отмечается активный thumbnail при прокрутке слайдов
-    $('.rooms-carousel').on('slide.bs.carousel', function(event) {
-        var sender = $(this);
-        swipe(sender, event.direction);
-    });
 
 
+////листалка карусели номеров на тач устройствах (для главной картинки)
+//    $('.rooms-carousel').swiperight(function() {
+//        $(this).carousel('prev');
+//    }).swipeleft(function() {
+//        $(this).carousel('next');
+//    });
+//    //свайп на главной странице
+//    $('#myCarousel').swiperight(function() {
+//        $(this).carousel('prev');
+//    }).swipeleft(function() {
+//        $(this).carousel('next');
+//    });
 
-//листалка карусели номеров на тач устройствах (для главной картинки)
-    $('.rooms-carousel').swiperight(function() {
-        var sender = $(this);
-        swipe(sender);
-        sender.carousel('prev');
+    /**
+     * свайп для основных каруселей
+     * (на номерах и на главной)
+     */
+    $('.carousel').swiperight(function() {
+        $(this).carousel('prev');
     }).swipeleft(function() {
-        var sender = $(this);
-//        swipe(sender);
-        sender.carousel('next');
+        $(this).carousel('next');
     });
 
 //листалка карусели номеров на тач устройствах (для превьюшек)
-    $('.slider-thumbs').swiperight(function() {
-        var sender = $(this).closest('.slider-wrapper').find('.rooms-carousel');
-        sender.carousel('prev');
-    }).swipeleft(function() {
-        var sender = $(this).closest('.slider-wrapper').find('.rooms-carousel');
-        sender.carousel('next');
+//    $('.slider-thumbs').swiperight(function() {
+//        var sender = $(this).closest('.slider-wrapper').find('.rooms-carousel');
+//        sender.carousel('prev');
+//    }).swipeleft(function() {
+//        var sender = $(this).closest('.slider-wrapper').find('.rooms-carousel');
+//        sender.carousel('next');
+//    });
+
+
+    /**
+     * прокрутка колесом на номерах (большая картинка)
+     * и на главной
+     */
+//    $('.rooms-carousel').mousewheel(function(event, delta) {
+//        mouseWheel($(this), event);
+//    });
+//      //прокрутка колесом на главной
+//    $('#myCarousel').mousewheel(function(event) {
+//        var sender = $(this);
+//        mouseWheel(sender, event);
+//    });
+    $('.carousel').mousewheel(function(event, delta) {
+        mouseWheel($(this), event);
     });
 
 
-    //свайп на главной странице
-    $('#myCarousel').swiperight(function() {
-        var sender = $(this);
-//        swipe(sender);
-        sender.carousel('prev');
-    }).swipeleft(function() {
-        var sender = $(this);
-//        swipe(sender);
-        sender.carousel('next');
-    });
+
+//    //прокрутка колесом на номерах (превьюшки)
+//    $('.slider-thumbs').mousewheel(function(event, delta) {
+//        var sender = $(this).closest('.slider-wrapper').find('.rooms-carousel');
+//        //листаем назад
+//        if (event.deltaY > 0)
+//        {
+//            sender.carousel('prev');
+////            selected - thumb
+//        }
+//        else
+//        {
+//            //вперед
+//            sender.carousel('next');
+//        }
+//
+//        //запрет скрола страницы, пока курсор над большой картинкой карусели
+//        event.preventDefault();
+//    });
 
 
-
-//прокрутка колесом на номерах (основная картинка)
-    $('.rooms-carousel').mousewheel(function(event, delta) {
-        var sender = $(this);
-        mouseWheel(sender, event);
-    });
-
-
-    //прокрутка колесом на номерах (превьюшки)
-    $('.slider-thumbs').mousewheel(function(event, delta) {
-        var sender = $(this).closest('.slider-wrapper').find('.rooms-carousel');
-        //листаем назад
-        if (event.deltaY > 0)
-        {
-            sender.carousel('prev');
-//            selected - thumb
-        }
-        else
-        {
-            //вперед
-            sender.carousel('next');
-        }
-
-        //запрет скрола страницы, пока курсор над большой картинкой карусели
-        event.preventDefault();
-    });
-
-    //прокрутка колесом на главной
-    $('#myCarousel').mousewheel(function(event) {
-        var sender = $(this);
-        mouseWheel(sender, event);
-    });
 
 
 
