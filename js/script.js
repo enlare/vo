@@ -106,8 +106,10 @@ $(document).ready(function() {
         var sender = $(this);
         mouseWheel(sender, event);
     });
-
-
+    $.mobile.ajaxEnabled = false;
+    $.mobile.page.prototype.options.domCache = false;
+    $.mobile.hidePageLoadingMsg();
+    
 });
 
 
